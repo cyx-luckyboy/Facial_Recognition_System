@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人脸识别签到系统</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>人脸识别签到系统</h1>
+        </header>
+        
+        <main>
+            <div class="video-container">
+                <video id="video" width="640" height="480" autoplay></video>
+                <canvas id="canvas" width="640" height="480"></canvas>
+            </div>
+            
+            <div class="controls">
+                <button id="captureBtn">采集人脸</button>
+                <button id="trainBtn">训练模型</button>
+                <button id="recognizeBtn">识别签到</button>
+                <button id="exportBtn">导出签到表</button>                                                
+            </div>
+            
+            <div class="status">
+                <h3>签到状态</h3>
+                <div id="statusMessage"></div>
+                <div id="train-status"></div>
+                <div id="studentInfo"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
